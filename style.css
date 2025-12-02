@@ -1,0 +1,669 @@
+/* ==========
+   Base Styles
+   ========== */
+
+:root {
+  --color-primary: #0066cc;
+  --color-primary-light: #4da6ff;
+  --color-primary-dark: #0a1a2f;
+  --color-accent: #2bae66;
+  --color-bg: #f5f7fb;
+  --color-bg-alt: #ffffff;
+  --color-bg-soft: #edf3ff;
+  --color-text: #222222;
+  --color-muted: #777777;
+  --color-border: #dde3f0;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow-soft: 0 18px 40px rgba(10, 26, 47, 0.12);
+  --shadow-light: 0 10px 24px rgba(10, 26, 47, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+/* ==========
+   Layout
+   ========== */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-alt {
+  background-color: var(--color-bg-soft);
+}
+
+.section-accent {
+  background: linear-gradient(135deg, #0066cc, #4da6ff);
+  color: #ffffff;
+}
+
+.section-accent h2,
+.section-accent p,
+.section-accent label,
+.section-accent li {
+  color: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* ==========
+   Header
+   ========== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: rgba(245, 247, 251, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(221, 227, 240, 0.7);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+}
+
+/* Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0066cc, #4da6ff);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.logo-text {
+  color: var(--color-primary-dark);
+}
+
+/* Nav */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  font-size: 0.92rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+.nav-cta {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* ==========
+   Buttons
+   ========== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.18s ease-in-out;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0066cc, #004b99);
+  color: #ffffff;
+  box-shadow: var(--shadow-light);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+.btn-outline:hover {
+  background-color: rgba(0, 102, 204, 0.06);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ==========
+   Hero
+   ========== */
+
+.hero {
+  padding: 4.5rem 0 3.5rem;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.hero-subtitle {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+  max-width: 32rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-item {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background-color: rgba(237, 243, 255, 0.9);
+  border: 1px solid rgba(221, 227, 240, 0.8);
+}
+
+.meta-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+.meta-value {
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+/* Hero side card */
+
+.hero-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 1.8rem 1.6rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(10, 26, 47, 0.04);
+}
+
+.hero-card h2 {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+.hero-list li {
+  margin-bottom: 0.35rem;
+}
+
+.hero-card-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+}
+
+.hero-card-label {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+}
+
+.hero-card-price {
+  margin: 0.15rem 0 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.hero-card-note {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+/* ==========
+   Grid & Cards
+   ========== */
+
+.grid {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.programs-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.steps-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.testimonials-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Cards */
+
+.card {
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.4rem;
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--color-border);
+}
+
+.program-card h3 {
+  font-family: "Poppins", system-ui, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.program-tag {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.program-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.8rem 0 0;
+  font-size: 0.9rem;
+}
+
+.program-list li {
+  margin-bottom: 0.35rem;
+}
+
+/* Steps */
+
+.step-card {
+  text-align: left;
+  padding: 1.8rem 1.4rem;
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Pricing */
+
+.pricing-card {
+  position: relative;
+  text-align: left;
+}
+
+.pricing-card-featured {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.pricing-price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.2rem 0 0.2rem;
+  color: var(--color-primary-dark);
+}
+
+.pricing-label {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.3rem;
+  font-size: 0.9rem;
+}
+
+.pricing-list li {
+  margin-bottom: 0.35rem;
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* About */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-card {
+  background-color: #ffffff;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.about-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonials */
+
+.testimonial-card {
+  font-size: 0.95rem;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  margin-top: 0;
+}
+
+.testimonial-name {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+/* ==========
+   Enroll / Form
+   ========== */
+
+.enroll-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 2.2rem;
+  align-items: start;
+}
+
+.enroll-points {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.enroll-points li {
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.enroll-points li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-accent);
+  font-size: 1.3rem;
+}
+
+.enroll-form {
+  background-color: rgba(255, 255, 255, 0.96);
+  padding: 1.6rem 1.4rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-light);
+}
+
+.form-group {
+  margin-bottom: 0.9rem;
+}
+
+label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid rgba(221, 227, 240, 0.9);
+  font: inherit;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px rgba(0, 102, 204, 0.12);
+}
+
+.form-note {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+/* ==========
+   Footer
+   ========== */
+
+.footer {
+  background-color: var(--color-primary-dark);
+  color: #e2e6f0;
+  padding: 1.6rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-brand {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 600;
+  margin: 0 0 0.2rem;
+}
+
+.footer-text {
+  margin: 0.1rem 0;
+  font-size: 0.85rem;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==========
+   Responsive
+   ========== */
+
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-card {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .programs-grid,
+  .steps-grid,
+  .pricing-grid,
+  .testimonials-grid,
+  .about-grid,
+  .enroll-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pricing-card-featured {
+    transform: none;
+  }
+
+  .header-inner {
+    gap: 1rem;
+  }
+
+  .nav {
+    display: none; /* Keep it simple; can add mobile menu later */
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 3.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 3.2rem 0;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+  }
+}
