@@ -666,4 +666,15 @@ textarea:focus {
   .hero-meta {
     flex-direction: column;
   }
+   .logo-img-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
 }
