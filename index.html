@@ -66,10 +66,10 @@
       <div class="hero-card">
         <h2>Next 4-Week Digital Skills Bootcamp</h2>
         <ul class="hero-list">
-          <li>✅ Computer basics & internet skills</li>
-          <li>✅ Microsoft Word, Excel & PowerPoint</li>
-          <li>✅ AI tools like ChatGPT for everyday work</li>
-          <li>✅ Resume, job search & interview prep</li>
+          <li>✔ Computer basics & internet skills</li>
+          <li>✔ Microsoft Word, Excel & PowerPoint</li>
+          <li>✔ AI tools like ChatGPT for everyday work</li>
+          <li>✔ Resume, job search & interview prep</li>
         </ul>
         <div class="hero-card-footer">
           <p class="hero-card-label">Tuition</p>
@@ -81,7 +81,7 @@
     </div>
   </section>
 
-  <!-- PROGRAMS -->
+  <!-- Programs -->
   <section id="programs" class="section">
     <div class="container">
       <div class="section-header">
@@ -117,7 +117,7 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <!-- How It Works -->
   <section id="how-it-works" class="section section-alt">
     <div class="container">
       <div class="section-header">
@@ -147,7 +147,7 @@
     </div>
   </section>
 
-  <!-- PRICING -->
+  <!-- Pricing -->
   <section id="pricing" class="section">
     <div class="container">
       <div class="section-header">
@@ -193,7 +193,7 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- About -->
   <section id="about" class="section section-alt">
     <div class="container about-grid">
       <div>
@@ -218,7 +218,7 @@
     </div>
   </section>
 
-  <!-- ENROLL -->
+  <!-- Enroll -->
   <section id="enroll" class="section section-accent">
     <div class="container enroll-grid">
       <div>
@@ -228,33 +228,57 @@
         </p>
       </div>
 
-      <!-- UPDATED FORM USING FORMSUBMIT -->
+      <!-- Updated Form (with labels + validation + FormSubmit) -->
       <form 
         class="enroll-form"
         action="https://formsubmit.co/Aabdi10@gmail.com"
         method="POST"
       >
+        <!-- FormSubmit settings -->
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="New MNSkills Enrollment Inquiry">
 
+        <!-- Full Name -->
         <div class="form-group">
-          <label>Full Name</label>
-          <input name="name" type="text" required />
+          <label for="name">Full Name</label>
+          <input 
+            id="name" 
+            name="name" 
+            type="text" 
+            placeholder="Enter your full name"
+            required 
+          />
         </div>
 
+        <!-- Email -->
         <div class="form-group">
-          <label>Email Address</label>
-          <input name="email" type="email" required />
+          <label for="email">Email Address</label>
+          <input 
+            id="email" 
+            name="email" 
+            type="email"
+            placeholder="example@gmail.com"
+            required 
+          />
         </div>
 
+        <!-- Phone -->
         <div class="form-group">
-          <label>Phone (optional)</label>
-          <input name="phone" type="tel" />
+          <label for="phone">Phone Number (numbers only)</label>
+          <input 
+            id="phone" 
+            name="phone" 
+            type="tel"
+            placeholder="6125551234"
+            pattern="[0-9]{10,15}"
+            title="Please enter numbers only (10–15 digits)."
+          />
         </div>
 
+        <!-- Program -->
         <div class="form-group">
-          <label>Program of Interest</label>
-          <select name="program">
+          <label for="program">Program of Interest</label>
+          <select id="program" name="program">
             <option value="">Select a program</option>
             <option value="Essential Digital Skills Bootcamp">Essential Digital Skills Bootcamp</option>
             <option value="Microsoft Office for Work">Microsoft Office for Work</option>
@@ -264,9 +288,15 @@
           </select>
         </div>
 
+        <!-- Message -->
         <div class="form-group">
-          <label>How can we help?</label>
-          <textarea name="message" rows="4"></textarea>
+          <label for="message">How can we help?</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="4"
+            placeholder="Share your goals or questions."
+          ></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary btn-block">Submit</button>
@@ -275,7 +305,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-left">
