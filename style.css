@@ -99,7 +99,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.7rem 0;
+  padding: 0.55rem 0;
 }
 
 /* LOGO IMAGE */
@@ -109,16 +109,18 @@ html {
 }
 
 .logo-img {
-  height: 44px;
+  height: 32px; /* final chosen size */
   width: auto;
   object-fit: contain;
+  display: block;
+  margin: 0;
 }
 
 /* NAVIGATION */
 .nav {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.3rem;
 }
 
 .nav a {
@@ -132,10 +134,11 @@ html {
 }
 
 .nav-cta {
-  padding: 0.4rem 0.9rem;
+  padding: 0.35rem 0.85rem;
   border: 1px solid var(--color-primary);
   border-radius: 999px;
   color: var(--color-primary);
+  font-weight: 600;
 }
 
 /* ============================================
@@ -303,7 +306,7 @@ html {
 
 .card {
   background: #fff;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   padding: 1.5rem;
   box-shadow: var(--shadow-light);
   border: 1px solid var(--color-border);
@@ -447,7 +450,7 @@ select:focus {
   }
 
   .logo-img {
-    height: 40px;
+    height: 30px;
   }
 }
 
