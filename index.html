@@ -17,10 +17,11 @@
   <!-- Header -->
   <header class="header">
     <div class="container header-inner">
-      <div class="logo">
-        <span class="logo-mark">MN</span>
-        <span class="logo-text">Skills</span>
-      </div>
+
+      <!-- LOGO IMAGE -->
+      <a href="#" class="logo-img-wrapper">
+        <img src="mnskillslog.png" alt="MNSkills Logo" class="logo-img">
+      </a>
 
       <nav class="nav">
         <a href="#programs">Programs</a>
@@ -198,12 +199,8 @@
     <div class="container about-grid">
       <div>
         <h2>About MNSkills</h2>
-        <p>
-          MNSkills empowers adults across Minnesota by providing accessible and practical digital, AI, and job-readiness training designed for today's workforce.
-        </p>
-        <p>
-          Our programs are practical, supportive, and built for adults who want to build confidence and real skills — without feeling overwhelmed.
-        </p>
+        <p>MNSkills empowers adults across Minnesota by providing digital, AI, and job-readiness training designed for today’s workforce.</p>
+        <p>Our programs are practical, supportive, and built for adults who want to build confidence and real skills — without feeling overwhelmed.</p>
       </div>
 
       <div class="card about-card">
@@ -223,59 +220,40 @@
     <div class="container enroll-grid">
       <div>
         <h2>Ready to Build Your Skills?</h2>
-        <p>
-          Tell us about you. We’ll follow up with dates, options, and next steps.
-        </p>
+        <p>Tell us about you. We’ll follow up with dates, options, and next steps.</p>
       </div>
 
-      <!-- Updated Form (with labels + validation + FormSubmit) -->
+      <!-- Contact Form -->
       <form 
         class="enroll-form"
         action="https://formsubmit.co/Aabdi10@gmail.com"
         method="POST"
       >
-        <!-- FormSubmit settings -->
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="New MNSkills Enrollment Inquiry">
 
-        <!-- Full Name -->
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input 
-            id="name" 
-            name="name" 
-            type="text" 
-            placeholder="Enter your full name"
-            required 
-          />
+          <input id="name" name="name" type="text" placeholder="Enter your full name" required />
         </div>
 
-        <!-- Email -->
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input 
-            id="email" 
-            name="email" 
-            type="email"
-            placeholder="example@gmail.com"
-            required 
-          />
+          <input id="email" name="email" type="email" placeholder="example@gmail.com" required />
         </div>
 
-        <!-- Phone -->
         <div class="form-group">
           <label for="phone">Phone Number (numbers only)</label>
           <input 
             id="phone" 
-            name="phone" 
+            name="phone"
             type="tel"
-            placeholder="6125551234"
             pattern="[0-9]{10,15}"
+            placeholder="6125551234"
             title="Please enter numbers only (10–15 digits)."
           />
         </div>
 
-        <!-- Program -->
         <div class="form-group">
           <label for="program">Program of Interest</label>
           <select id="program" name="program">
@@ -288,15 +266,9 @@
           </select>
         </div>
 
-        <!-- Message -->
         <div class="form-group">
           <label for="message">How can we help?</label>
-          <textarea 
-            id="message" 
-            name="message" 
-            rows="4"
-            placeholder="Share your goals or questions."
-          ></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="Share your goals or questions."></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary btn-block">Submit</button>
@@ -312,7 +284,6 @@
         <p class="footer-brand">MNSkills</p>
         <p class="footer-text">Digital, AI & career skills for Minnesota adults.</p>
       </div>
-
       <div class="footer-right">
         <p class="footer-text">Email: <a href="mailto:info@mnskills.com">info@mnskills.com</a></p>
         <p class="footer-text">&copy; <span id="year"></span> MNSkills</p>
